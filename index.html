@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <header>
+            <h1>Weather Dashboard</h1>
+            <p>Search for a city to view the current weather.</p>
+        </header>
+
+        <section class="search-section">
+
+            <form id="search-form">
+
+                <label for="city-input">City</label>
+
+                <div class="search-group">
+                    <input
+                        type="text"
+                        id="city-input"
+                        placeholder="Enter a city name"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">
+                        Search
+                    </button>
+                </div>
+
+                <p id="input-error"></p>
+
+            </form>
+
+        </section>
+
+
+        <section
+            id="loading"
+            class="loading"
+            hidden
+        >
+            <p>Loading weather data...</p>
+        </section>
+
+
+        <section
+            id="error"
+            class="error"
+            hidden
+        >
+            <p id="error-message"></p>
+        </section>
+
+
+        <section
+            id="weather-result"
+            class="weather-result"
+            hidden
+        >
+
+            <div class="weather-header">
+
+                <div>
+                    <h2 id="city-name"></h2>
+                    <p id="weather-description"></p>
+                </div>
+
+                <img
+                    id="weather-icon"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <div class="temperature">
+
+                <p id="temperature"></p>
+
+            </div>
+
+
+            <div class="weather-details">
+
+                <article>
+                    <h3>Feels Like</h3>
+                    <p id="feels-like"></p>
+                </article>
+
+                <article>
+                    <h3>Humidity</h3>
+                    <p id="humidity"></p>
+                </article>
+
+                <article>
+                    <h3>Wind Speed</h3>
+                    <p id="wind-speed"></p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
